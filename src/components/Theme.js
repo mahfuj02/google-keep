@@ -1,5 +1,3 @@
-import { createTheme } from "@mui/material";
-
 export const getDesignTokens = (mode) => ({
   palette: {
     mode,
@@ -7,6 +5,8 @@ export const getDesignTokens = (mode) => ({
       ? {
           primary: {
             main: "#E8EAED",
+            hovarColor:"#303134",
+            light:'#fffff'
           },
           background: {
             default: "#202124",
