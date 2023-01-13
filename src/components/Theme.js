@@ -1,6 +1,7 @@
 export const getDesignTokens = (mode) => ({
   palette: {
     mode,
+    typography:'roboto',
     ...(mode === "dark"
       ? {
           primary: {

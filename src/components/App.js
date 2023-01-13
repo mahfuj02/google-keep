@@ -1,10 +1,10 @@
-import { createTheme, Stack, ThemeProvider } from "@mui/material";
+import { Box, createTheme, Stack, ThemeProvider } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import { useState } from "react";
 import CreateText from "./CreateText";
 import Header from "./Header";
 import Note from "./Note";
-import Sidevar, { MobileSidebar } from "./Sidevar";
+import Sidevar from "./Sidevar";
 import { getDesignTokens } from "./Theme";
 
 function App() {
@@ -17,11 +17,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header handleSwitch={handleSwitch} themeType={themeType} />
-      <Stack direction="row">
-        <Sidevar />
+      <Stack direction='row'>
+        <Box sx={{width:'20%'}}> <Sidevar /> </Box>
         <Stack sx={{width:'80%'}}>
-          <CreateText />
-          <Note />
+          <CreateText themeType={themeType} />
+          <Note themeType={themeType} />
         </Stack>
       </Stack>
     </ThemeProvider>

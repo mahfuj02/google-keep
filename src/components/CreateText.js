@@ -1,6 +1,6 @@
 import { Box, Divider, Stack, TextField } from "@mui/material";
 
-export default function CreateText() {
+export default function CreateText({themeType}) {
   return (
     <Box align="center">
       <Stack
@@ -8,7 +8,7 @@ export default function CreateText() {
           my: 5,
           padding: "10px",
           borderRadius: 2,
-          border: "1px solid #5F6368",        
+          border: themeType==='dark' ? "1px solid #5F6368" : "" ,        
           width: { md: "60%" },
           boxShadow: 5,
         }}

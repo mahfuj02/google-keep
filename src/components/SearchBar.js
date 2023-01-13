@@ -19,7 +19,7 @@ export default function SearchBar() {
         p: "2px 4px",
         display: "flex",
         alignItems: "center",
-        width: "50%",
+        width:{md:'50%', xs:'70%'},
         backgroundColor: searchActive
           ? "primary.searchBoxColor"
           : "primary.hovarColor",

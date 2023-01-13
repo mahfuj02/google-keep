@@ -1,12 +1,25 @@
-import { Divider, Paper, Stack, Typography } from "@mui/material";
+import {  Divider, Grid, Paper, Typography } from "@mui/material";
+import { useState } from "react";
+import FormDialog from "./EditText";
 
-export default function Note() {
+export default function Note({themeType}) {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <>
-      <Stack direction="row" spacing={2} sx={{ mx: "20px" }}>
+      <Grid container spacing={2} >
         <Paper
+          onClick={handleClickOpen}
           elevation={4}
-          sx={{ p: "10px", width: "30%", border: "1px solid #5F6368" }}
+          sx={{ m: 2, p: "10px", width:{ xs:'90%', md:"25%"},  border: themeType === 'dark' ? "1px solid #5F6368" : "" }}
         >
           <Typography variant="h6">Here is Title</Typography>
           <Divider sx={{ my: "5px" }}></Divider>
@@ -16,7 +29,11 @@ export default function Note() {
             ever since the
           </Typography>
         </Paper>
-      </Stack>
+        <FormDialog handleClose={handleClose} open={open} />
+        
+        
+        
+      </Grid>
     </>
   );
 }
