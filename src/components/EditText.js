@@ -25,7 +25,9 @@ export default function FormDialog({ handleClose, open }) {
             <TextField
               placeholder="Take a note..."
               variant="standard"
-              defaultValue="this is lorem sdfasdlsdf sdfhisd"
+              defaultValue="Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the"
               multiline
               InputProps={{
                 disableUnderline: true,
